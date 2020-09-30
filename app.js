@@ -1,8 +1,8 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-
+var port = process.env.PORT || 8080;
 var app = express();
-app.set("port", process.env.PORT || 3000);
+app.set("port", port);
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
