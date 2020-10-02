@@ -27,7 +27,11 @@ app.get("/pending", function (req, res) {
 });
 
 app.get("/detail", function (req, res) {
-  // console.log(req.query);
+  //console.log(req.query);
+  //console.log(
+  //  "https://epaulf-mp-commerce-nodejs.herokuapp.com" +
+  //    req.query.img.substring(1)
+  // );
   // SDK de Mercado Pago
   const mercadopago = require("mercadopago");
   // Agrega credenciales
@@ -44,7 +48,9 @@ app.get("/detail", function (req, res) {
         id: "1234",
         title: req.query.title,
         descrption: "Dispositivo móvil de Tienda e-commerce",
-        picture_url: req.query.img,
+        picture_url:
+          "https://epaulf-mp-commerce-nodejs.herokuapp.com/" +
+          req.query.img.substring(1),
         unit_price: parseInt(req.query.price),
         quantity: parseInt(req.query.unit),
       },
