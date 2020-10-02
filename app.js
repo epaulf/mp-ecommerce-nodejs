@@ -41,6 +41,7 @@ app.get("/detail", function (req, res) {
     items: [
       {
         id: 1234,
+        currency_id: "MXN",
         title: req.query.title,
         descrption: "Dispositivo móvil de Tienda e-commerce",
         picture_url:
