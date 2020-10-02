@@ -40,6 +40,7 @@ app.get("/detail", function (req, res) {
       failure: "https://epaulf-mp-commerce-nodejs.herokuapp.com/failure",
       pending: "https://epaulf-mp-commerce-nodejs.herokuapp.com/pending",
     },
+    auto_return: "approved",
     external_reference: "1234656789102020",
     items: [
       {
@@ -54,8 +55,8 @@ app.get("/detail", function (req, res) {
     .create(preference)
     .then(function (response) {
       // Este valor reemplazará el string "<%= global.id %>" en tu HTML
-      console.log("si");
-      console.log(response.body.id);
+      ///console.log("si");
+      //console.log(response.body.id);
       id = response.body.id;
       res.render("detail", { query: req.query, id: id });
     })
