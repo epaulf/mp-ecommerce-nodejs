@@ -73,7 +73,7 @@
                             </div>
 
                         </div>
-                        <div class="as-producttile-info" style="float:left;min-height: 168px;">
+                        <class class="as-producttile-info" style="float:left;min-height: 168px;">
                             <div class="as-producttile-titlepricewraper" style="min-height: 128px;">
                                 <div class="as-producttile-title">
                                     <h3 class="as-producttile-name">
@@ -90,15 +90,10 @@
                                     {{ query.unit }}
                                 </h3>
                             </div>
-                            {{!-- <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button> --}}
-                            <a href="https://www.mercadopago.com.mx/checkout/v1/modal/?preference-id={{ id }}"
-                                target="_blank">Pagar</a>
-                            <form method="POST">
-                                <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                                    data-preference-id="{{ id }}">
-                                    </script>
-                            </form>
-                        </div>
+                            <div class="btn btn-primary"><a style="color:rgba(252, 246, 246, 0.986);"
+                                    href="{{ init_point }}" target="_blank">Pagar</a></div>
+
+
                     </div>
                 </div>
             </div>

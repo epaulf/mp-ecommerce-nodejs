@@ -23,7 +23,6 @@ app.get("/pending", function (req, res) {
 });
 
 app.get("/detail", function (req, res) {
-  console.log(req.query);
   // SDK de Mercado Pago
   const mercadopago = require("mercadopago");
   // Agrega credenciales
@@ -55,10 +54,13 @@ app.get("/detail", function (req, res) {
     .create(preference)
     .then(function (response) {
       // Este valor reemplazará el string "<%= global.id %>" en tu HTML
-      ///console.log("si");
-      //console.log(response.body.id);
+      init_point = response.response.init_point;
       id = response.body.id;
-      res.render("detail", { query: req.query, id: id });
+      res.render("detail", {
+        query: req.query,
+        id: id,
+        init_point: init_point,
+      });
     })
     .catch(function (error) {
       console.log(error);
