@@ -61,7 +61,7 @@ app.get("/detail", function (req, res) {
         picture_url: req.query.img,
         unit_price: parseInt(req.query.price),
         quantity: parseInt(req.query.unit),
-        external_reference: "ericpaulflorese@gmailcom",
+        //external_reference: "ericpaulflorese@gmailcom",
       },
     ],
     payer: {
