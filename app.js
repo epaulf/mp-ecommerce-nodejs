@@ -49,7 +49,7 @@ app.get("/detail", function (req, res) {
       failure: "https://epaulf-mp-commerce-nodejs.herokuapp.com/failure",
       pending: "https://epaulf-mp-commerce-nodejs.herokuapp.com/pending",
     },
-    //external_reference: "102020",
+    external_reference: "102020",
     notification_url:
       "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
     auto_return: "approved",
@@ -65,8 +65,8 @@ app.get("/detail", function (req, res) {
       },
     ],
     payer: {
-      first_name: "Lalo",
-      last_name: "Landa",
+      name: "Lalo",
+      surname: "Landa",
       email: "test_user_58295862@testuser.com",
       address: {
         zip_code: "039940",
