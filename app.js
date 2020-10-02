@@ -67,6 +67,7 @@ app.get("/detail", function (req, res) {
     payer: {
       first_name: "Lalo",
       last_name: "Landa",
+      email: "test_user_58295862@testuser.com",
       address: {
         zip_code: "039940",
         street_name: "Insurgentes Sur",
