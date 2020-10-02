@@ -91,7 +91,8 @@
                                 </h3>
                             </div>
                             {{!-- <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button> --}}
-
+                            <a href="https://www.mercadopago.com.mx/checkout/v1/modal/?preference-id={{ id }}"
+                                target="_blank">Pagar</a>
                             <form method="POST">
                                 <script src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
                                     data-preference-id="{{ id }}">
