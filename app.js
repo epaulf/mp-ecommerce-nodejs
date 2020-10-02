@@ -40,7 +40,7 @@ app.get("/detail", function (req, res) {
   let preference = {
     items: [
       {
-        id: "1234",
+        id: 1234,
         title: req.query.title,
         descrption: "Dispositivo móvil de Tienda e-commerce",
         picture_url:
