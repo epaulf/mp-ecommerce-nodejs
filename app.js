@@ -49,7 +49,7 @@ app.get("/detail", function (req, res) {
       failure: "https://epaulf-mp-commerce-nodejs.herokuapp.com/failure",
       pending: "https://epaulf-mp-commerce-nodejs.herokuapp.com/pending",
     },
-    external_reference: "102020",
+    external_reference: "ericpaulflorese@gmailcom",
     notification_url:
       "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
     auto_return: "approved",
