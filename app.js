@@ -27,11 +27,6 @@ app.get("/pending", function (req, res) {
 });
 
 app.get("/detail", function (req, res) {
-  //console.log(req.query);
-  //console.log(
-  //  "https://epaulf-mp-commerce-nodejs.herokuapp.com" +
-  //    req.query.img.substring(1)
-  // );
   // SDK de Mercado Pago
   const mercadopago = require("mercadopago");
   // Agrega credenciales
