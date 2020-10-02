@@ -39,20 +39,6 @@ app.get("/detail", function (req, res) {
 
   // Crea un objeto de preferencia
   let preference = {
-    payment_methods: {
-      excluded_payment_methods: [{ id: "amex" }],
-      excluded_payment_types: [{ id: "atm" }],
-      installments: 6,
-    },
-    back_urls: {
-      success: "https://epaulf-mp-commerce-nodejs.herokuapp.com/success",
-      failure: "https://epaulf-mp-commerce-nodejs.herokuapp.com/failure",
-      pending: "https://epaulf-mp-commerce-nodejs.herokuapp.com/pending",
-    },
-    external_reference: "ericpaulflorese@gmailcom",
-    notification_url:
-      "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
-    auto_return: "approved",
     items: [
       {
         id: "1234",
@@ -61,7 +47,6 @@ app.get("/detail", function (req, res) {
         picture_url: req.query.img,
         unit_price: parseInt(req.query.price),
         quantity: parseInt(req.query.unit),
-        //external_reference: "ericpaulflorese@gmailcom",
       },
     ],
     payer: {
@@ -78,6 +63,20 @@ app.get("/detail", function (req, res) {
         number: 5549737300,
       },
     },
+    back_urls: {
+      success: "https://epaulf-mp-commerce-nodejs.herokuapp.com/success",
+      failure: "https://epaulf-mp-commerce-nodejs.herokuapp.com/failure",
+      pending: "https://epaulf-mp-commerce-nodejs.herokuapp.com/pending",
+    },
+    payment_methods: {
+      excluded_payment_methods: [{ id: "amex" }],
+      excluded_payment_types: [{ id: "atm" }],
+      installments: 6,
+    },
+    auto_return: "approved",
+    notification_url:
+      "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
+    external_reference: "ericpaulflorese@gmailcom",
   };
 
   mercadopago.preferences
