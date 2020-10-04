@@ -16,9 +16,9 @@ app.get("/failure", function (req, res) {
 
 app.get("/success", function (req, res) {
   console.log(req.query);
-  payment_method_id = req.query.payment_method_id;
+  payment_method_id = req.query.payment_type;
   external_reference = req.query.external_reference;
-  payment_id = req.query.payment_id;
+  payment_id = req.query.collection_id;
   res.render("success", { payment_method_id, external_reference, payment_id });
 });
 
