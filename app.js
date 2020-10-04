@@ -42,12 +42,13 @@ app.get("/detail", function (req, res) {
       {
         id: 1234,
         title: req.query.title,
-        descrption: "Dispositivo móvil de Tienda e-commerce",
+        description: "Dispositivo móvil de Tienda e-commerce",
         picture_url:
           "https://epaulf-mp-commerce-nodejs.herokuapp.com/" +
           req.query.img.substring(1),
         unit_price: parseInt(req.query.price),
         quantity: parseInt(req.query.unit),
+        external_reference: "ericpaulflorese@gmailcom",
       },
     ],
     payer: {
@@ -55,7 +56,7 @@ app.get("/detail", function (req, res) {
       surname: "Landa",
       email: "test_user_58295862@testuser.com",
       address: {
-        zip_code: "039940",
+        zip_code: "0394​0",
         street_name: "Insurgentes Sur",
         street_number: 1602,
       },
@@ -77,7 +78,7 @@ app.get("/detail", function (req, res) {
     auto_return: "approved",
     notification_url:
       "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
-    external_reference: "ericpaulflorese@gmailcom",
+    external_reference: "123456",
   };
 
   mercadopago.preferences
