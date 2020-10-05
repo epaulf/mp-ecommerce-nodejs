@@ -55,14 +55,14 @@ app.get("/detail", function (req, res) {
       name: "Lalo",
       surname: "Landa",
       email: "test_user_58295862@testuser.com",
+      phone: {
+        area_code: "52",
+        number: 5549737300,
+      },
       address: {
         zip_code: "0394​0",
         street_name: "Insurgentes Sur",
         street_number: 1602,
-      },
-      phone: {
-        area_code: "52",
-        number: 5549737300,
       },
     },
     back_urls: {
@@ -78,7 +78,7 @@ app.get("/detail", function (req, res) {
     auto_return: "approved",
     notification_url:
       "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
-    external_reference: "123456",
+    external_reference: "ericpaulflorese@gmailcom",
   };
 
   mercadopago.preferences
