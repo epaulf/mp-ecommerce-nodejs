@@ -46,8 +46,8 @@ app.get("/detail", function (req, res) {
         picture_url:
           "https://epaulf-mp-commerce-nodejs.herokuapp.com/" +
           req.query.img.substring(1),
-        unit_price: parseInt(req.query.price),
         quantity: parseInt(req.query.unit),
+        unit_price: parseInt(req.query.price),
         external_reference: "ericpaulflorese@gmailcom",
       },
     ],
