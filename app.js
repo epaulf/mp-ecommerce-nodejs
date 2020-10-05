@@ -51,6 +51,7 @@ app.get("/detail", function (req, res) {
         external_reference: "ericpaulflorese@gmailcom",
       },
     ],
+    external_reference: "ericpaulflorese@gmailcom",
     payer: {
       name: "Lalo",
       surname: "Landa",
@@ -78,7 +79,6 @@ app.get("/detail", function (req, res) {
     auto_return: "approved",
     notification_url:
       "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
-    external_reference: "ericpaulflorese@gmailcom",
   };
 
   mercadopago.preferences
