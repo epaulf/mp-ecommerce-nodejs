@@ -99,10 +99,8 @@ app.get("/detail", function (req, res) {
 });
 
 app.post("/notifications", function (req, res) {
-  if (req.body.data) {
-    var jsonContent = JSON.stringify(req.body);
-    console.log(jsonContent);
-  }
+  var jsonContent = JSON.stringify(req.body);
+  console.log(jsonContent);
   res.status(200).json("OK");
 });
 
