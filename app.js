@@ -80,7 +80,7 @@ app.get("/detail", function (req, res) {
     },
     auto_return: "approved",
     notification_url:
-      "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications",
+      "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications?source_news=webhooks",
   };
 
   mercadopago.preferences
