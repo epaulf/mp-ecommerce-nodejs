@@ -4,7 +4,6 @@ var id = "";
 var app = express();
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false }));
-// parse application/json
 app.use(bodyParser.json());
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
@@ -103,7 +102,7 @@ app.get("/detail", function (req, res) {
 });
 
 app.post("/webhook", function (req, res) {
-  console.log("MENSAJE:", req);
+  console.log("MENSAJE:", req.body);
   console.log(req.query);
   res.status(200).json("OK");
 });
