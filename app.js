@@ -3,6 +3,9 @@ var exphbs = require("express-handlebars");
 var id = "";
 var app = express();
 
+const bodyParser = require("body-parser");
+app.use(bodyParser);
+
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
