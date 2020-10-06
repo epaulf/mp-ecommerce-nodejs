@@ -100,7 +100,7 @@ app.get("/detail", function (req, res) {
 });
 
 app.post("/webhook", function (req, res) {
-  console.log("MENSAJE:", req.body);
+  console.log("MENSAJE:", req);
   console.log(req.query);
   res.status(200).json("OK");
 });
