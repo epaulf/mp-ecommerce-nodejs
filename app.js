@@ -40,7 +40,7 @@ app.get("/detail", function (req, res) {
   let preference = {
     items: [
       {
-        id: 1234,
+        id: "1234",
         title: req.query.title,
         description: "Dispositivo móvil de Tienda e-commerce",
         picture_url:
@@ -99,8 +99,9 @@ app.get("/detail", function (req, res) {
 });
 
 app.post("/notifications", function (req, res) {
-  var jsonContent = JSON.stringify(req.body);
-  console.log(jsonContent);
+  console.log(req.body);
+  console.log(req.query);
+  console.log(req.body.data);
   res.status(200).json("OK");
 });
 
