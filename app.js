@@ -2,7 +2,10 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var id = "";
 var app = express();
-
+var bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
+app.use(bodyParser.json());
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
