@@ -79,8 +79,7 @@ app.get("/detail", function (req, res) {
       default_installments: 6,
     },
     auto_return: "approved",
-    notification_url:
-      "https://epaulf-mp-commerce-nodejs.herokuapp.com/notifications?source_news=webhooks",
+    notification_url: "https://epaulf-mp-commerce-nodejs.herokuapp.com/webhook",
   };
 
   mercadopago.preferences
@@ -100,9 +99,9 @@ app.get("/detail", function (req, res) {
     });
 });
 
-app.post("/notifications", function (req, res) {
+app.post("/webhook", function (req, res) {
   console.log(req.query);
-  if (req.body.data) {
+  if (req.body) {
     console.log(req.body);
   }
   res.status(200).json("OK");
