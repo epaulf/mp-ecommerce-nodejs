@@ -46,6 +46,8 @@ app.get("/detail", function (req, res) {
         picture_url:
           "https://epaulf-mp-commerce-nodejs.herokuapp.com/" +
           req.query.img.substring(1),
+        category_id: "1234",
+        currency_id: "MXN",
         quantity: parseInt(req.query.unit),
         unit_price: parseInt(req.query.price),
       },
@@ -99,9 +101,10 @@ app.get("/detail", function (req, res) {
 });
 
 app.post("/notifications", function (req, res) {
-  console.log(req.body);
   console.log(req.query);
-  console.log(req.body.data);
+  if (req.body.data) {
+    console.log(req.body);
+  }
   res.status(200).json("OK");
 });
 
