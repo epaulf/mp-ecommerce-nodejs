@@ -48,7 +48,6 @@ app.get("/detail", function (req, res) {
           req.query.img.substring(1),
         quantity: parseInt(req.query.unit),
         unit_price: parseInt(req.query.price),
-        external_reference: "ericpaulflorese@gmailcom",
       },
     ],
     external_reference: "ericpaulflorese@gmailcom",
@@ -75,6 +74,7 @@ app.get("/detail", function (req, res) {
       excluded_payment_methods: [{ id: "amex" }],
       excluded_payment_types: [{ id: "atm" }],
       installments: 6,
+      default_installments: 6,
     },
     auto_return: "approved",
     notification_url:
