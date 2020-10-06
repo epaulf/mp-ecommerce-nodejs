@@ -3,9 +3,6 @@ var exphbs = require("express-handlebars");
 var id = "";
 var app = express();
 
-const bodyParser = require("body-parser");
-app.use(bodyParser);
-
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
@@ -105,9 +102,6 @@ app.get("/detail", function (req, res) {
 app.post("/webhook", function (req, res) {
   console.log("MENSAJE:", req.body);
   console.log(req.query);
-  if (req.body) {
-    console.log(req.body);
-  }
   res.status(200).json("OK");
 });
 
