@@ -50,10 +50,10 @@ app.get("/detail", function (req, res) {
           req.query.img.substring(1),
         quantity: parseInt(req.query.unit),
         unit_price: parseInt(req.query.price),
-        external_reference: "ericpaulflorese@gmailcom",
+        external_reference: "ericpaulflorese@gmail.com",
       },
     ],
-    external_reference: "ericpaulflorese@gmailcom",
+    external_reference: "ericpaulflorese@gmail.com",
     payer: {
       name: "Lalo",
       surname: "Landa",
