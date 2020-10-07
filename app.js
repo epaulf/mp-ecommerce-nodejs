@@ -52,6 +52,7 @@ app.get("/detail", function (req, res) {
         currency_id: "MXN",
         quantity: parseInt(req.query.unit),
         unit_price: parseInt(req.query.price),
+        external_reference: "ericpaulflorese@gmailcom",
       },
     ],
     external_reference: "ericpaulflorese@gmailcom",
@@ -64,9 +65,9 @@ app.get("/detail", function (req, res) {
         number: 5549737300,
       },
       address: {
-        zip_code: "0394​0",
         street_name: "Insurgentes Sur",
         street_number: 1602,
+        zip_code: "03940",
       },
     },
     back_urls: {
