@@ -48,8 +48,6 @@ app.get("/detail", function (req, res) {
         picture_url:
           "https://epaulf-mp-commerce-nodejs.herokuapp.com/" +
           req.query.img.substring(1),
-        category_id: "1234",
-        currency_id: "MXN",
         quantity: parseInt(req.query.unit),
         unit_price: parseInt(req.query.price),
         external_reference: "ericpaulflorese@gmailcom",
@@ -70,19 +68,19 @@ app.get("/detail", function (req, res) {
         zip_code: "03940",
       },
     },
-    back_urls: {
-      success: "https://epaulf-mp-commerce-nodejs.herokuapp.com/success",
-      failure: "https://epaulf-mp-commerce-nodejs.herokuapp.com/failure",
-      pending: "https://epaulf-mp-commerce-nodejs.herokuapp.com/pending",
-    },
     payment_methods: {
       excluded_payment_methods: [{ id: "amex" }],
       excluded_payment_types: [{ id: "atm" }],
       installments: 6,
       default_installments: 6,
     },
-    auto_return: "approved",
+    back_urls: {
+      success: "https://epaulf-mp-commerce-nodejs.herokuapp.com/success",
+      failure: "https://epaulf-mp-commerce-nodejs.herokuapp.com/failure",
+      pending: "https://epaulf-mp-commerce-nodejs.herokuapp.com/pending",
+    },
     notification_url: "https://epaulf-mp-commerce-nodejs.herokuapp.com/webhook",
+    auto_return: "approved",
   };
 
   mercadopago.preferences
